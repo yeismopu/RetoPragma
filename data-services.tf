@@ -5,7 +5,7 @@ resource "azurerm_mssql_server" "sql" {
   version                       = "12.0"
   public_network_access_enabled = false
   administrator_login           = var.sql_admin
-  administrator_login_password  = var.sql_password
+  administrator_login_password  = VAR.SQL_PASSWORD
 }
 
 resource "azurerm_mssql_database" "db" {
