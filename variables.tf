@@ -1,9 +1,11 @@
 variable "location" {
-  default = "eastus"
+  default = "centralus"
 }
 
 variable "resource_group_name" {
-  default = "rg-aks-ecommerce"
+  description = "Nombre base del resource group"
+  type        = string
+  default     = "rg-ecommerce"
 }
 
 variable "aks_name" {
@@ -11,13 +13,18 @@ variable "aks_name" {
 }
 
 variable "acr_name" {
-  default = "acrecommerce12345"
+  default = "acrecommerce01"
 }
 
 variable "sql_admin" {
   default = "sqladminuser"
 }
 
-variable "sql_password" {
+variable "SQL_PASSWORD" {
   sensitive = true
+}
+
+variable "environment" {
+  description = "Environment: dev o pdn según el branch"
+  type        = string
 }
