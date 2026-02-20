@@ -19,7 +19,7 @@ jobs:
       name: ${{ github.ref_name == 'main' && 'production' || 'development' }}
 
     env:
-      TF_VAR_SQL_PASSWORD: ${{ secrets.TF_VAR_SQL_PASSWORD }} #en mayuscula
+      TF_VAR_SQL_PASSWORD: ${{ secrets.TF_VAR_SQL_PASSWORD }}
 
     steps:
       - name: Checkout repository
